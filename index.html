@@ -9,23 +9,21 @@
 </head>
 <body>
   <header>
-    </span>
-</button>
     <div class="container">
-      <img src="img/3e.png" alt="Foto de perfil" class="perfil" id="perfil">
+      <img src="img/3e.png" alt="Foto de perfil" class="profile-pic" id="profilePic">
       <h1>Elias Farias Brincker</h1>
-      <p>Desenvolvedor Web | Freelancer | Criador de Soluções Digitais | Desing | Editor de video e Fotos</p>
+      <p>Desenvolvedor Web | Freelancer | Criador de Soluções Digitais | Design | Editor de Vídeo e Fotos</p>
     </div>
   </header>
 
-  <section class="sobre">
+  <section class="about">
     <div class="container">
       <h2>Sobre Mim</h2>
       <p>Sou um profissional apaixonado por tecnologia e desenvolvimento web. Trabalho criando soluções modernas e responsivas para empresas e profissionais que desejam se destacar no mundo digital.</p>
     </div>
   </section>
 
-  <section class="habilidades">
+  <section class="skills">
     <div class="container">
       <h2>Habilidades</h2>
       <ul>
@@ -34,36 +32,33 @@
         <li>Conhecimento intermediário em PHP e MySQL</li>
         <li>UI/UX Design</li>
         <li>WordPress, Loja Virtual</li>
-        <li>Habilidade com Desing de imagens</li>
+        <li>Habilidade com Design de imagens</li>
         <li>Habilidade com planejamento de sites, logos, blogs pessoais, etc.</li>
       </ul>
     </div>
   </section>
 
-  <section class="projetos">
+  <section class="projects">
     <div class="container">
       <h2>Projetos</h2>
       <div class="grid">
         <div class="card">
-          <h3>Projeto 1</h3>
-          <p>Desing de um Site virtual.</p>
+          <img src="https://placehold.co/600x400/FDF9F3/596541?text=Sulum+Joias" alt="Projeto Sulum Joias" class="card-img">
+          <h3>Sulum Joias - Landing Page</h3>
+          <p>Landing page para uma joalheria fictícia, com foco em um design elegante e responsivo. Feito com Tailwind CSS.</p>
           <a href="exemplo/exemplo.html" target="_blank">Ver projeto</a>
         </div>
         <div class="card">
-          <h3>Projeto 2</h3>
-          <p>Pagina para blog pessoal</p>
+          <img src="https://placehold.co/600x400/2C3E50/E5E8E8?text=Blog+de+Ciencia" alt="Projeto Blog de Ciência" class="card-img">
+          <h3>Blog de Ciência</h3>
+          <p>Página de blog com tema de ciência (Albert Einstein), utilizando Tailwind CSS para uma interface moderna.</p>
           <a href="blog/blog.html" target="_blank">Ver projeto</a>
-        </div>
-        <div class="card">
-          <h3>Projeto 3</h3>
-          <p>.</p>
-          <a href="#" target="_blank">Ver projeto</a>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="contato">
+  <section class="contact">
     <div class="container">
       <h2>Contato</h2>
       <p>Email: <a href="mailto:eliasfariasbrincker83@email.com">eliasfariasbrincker83@email.com</a></p>
@@ -71,11 +66,11 @@
   </section>
 
   <footer>
-    <div class="social">
+    <div class="social-links">
       <a href="https://wa.me/5554992460671" target="_blank" title="WhatsApp">
         <i class="fab fa-whatsapp"></i>
       </a>
-      <a href="https://github.com/seu-usuario" target="_blank" title="GitHub">
+      <a href="https://github.com/eliasfariasbrincker" target="_blank" title="GitHub">
         <i class="fab fa-github"></i>
       </a>
       <a href="https://www.instagram.com/fariasbrincker?igsh=MWdwbXJnaDV4amRiOA==" target="_blank" title="Instagram">
@@ -85,7 +80,24 @@
   </footer>
 
   <div id="overlay">
-  <img src="" alt="Foto Ampliada">
-</div>
+    <img id="overlayImage" src="" alt="Foto Ampliada">
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const profilePic = document.getElementById('profilePic');
+      const overlay = document.getElementById('overlay');
+      const overlayImage = document.getElementById('overlayImage');
+
+      profilePic.addEventListener('click', function() {
+        overlayImage.src = this.src;
+        overlay.style.display = 'flex';
+      });
+
+      overlay.addEventListener('click', function() {
+        this.style.display = 'none';
+      });
+    });
+  </script>
 </body>
 </html>
