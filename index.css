@@ -59,14 +59,14 @@ section h2 {
   text-align: center;
 }
 
-.about p, .skills ul, .contact p {
+.about p, .contact p {
   font-size: 18px;
 }
 
 .skills ul {
   list-style: none;
   padding-left: 0;
-  text-align: center;
+  text-align: left; /* Aligned left as per request */
 }
 
 .skills li {
@@ -173,4 +173,10 @@ footer .social-links a:hover {
   max-height: 90%;
   border-radius: 10px;
   box-shadow: 0 0 25px rgba(0,0,0,0.5);
+}
+
+/* Specific alignment for About and Skills sections */
+.about h2,
+.skills h2 {
+  text-align: left;
 }
